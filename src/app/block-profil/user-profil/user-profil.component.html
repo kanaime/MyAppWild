@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem;" >
+  <img class="card-img-top" src="{{user.photo}}" alt="Card image cap">
+  <div class="card-body d-flex flex-column">
+    <strong>Prenom : {{user.name}}</strong>
+    <strong>Nom : {{user.firstname}}</strong>
+    <p class="card-text">{{user.quote}}</p>
+    <!-- Cet input marche et change directement la valeur dans le model user mais cest pas super rapide je trouve -->
+    <input #event (change)="saverange(event.value)">
+    <!-- Celui du dessous est plus rapide mais je sais pas si ca repond a la demande -->
+    <!-- <input #box (keyup)="0">
+    <p>{{box.value}}</p> -->
+    <p id="age" class="displayNone">Age : {{user.age}} ans</p>
+  </div>
+  <div class="card-header">
+
+    <button class="checkbox" id="checkbox" (click)="enableToggle()">
+      <div class="boule" id="toggle"> clique ici</div>
+    </button>
+  </div>
+</div>

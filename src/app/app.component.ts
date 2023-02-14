@@ -2,9 +2,21 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+  <Strong>{{title}}</Strong>
+  <button (click)="toggle(isAdmin)">
+  View
+  </button>
+  <button *ngIf="isAdmin">
+    Edit
+  </button>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Bienvenue sur le site de Anton !';
+  title = 'Bonjour';
+  isAdmin: boolean = false;
+  toggle(bool: boolean){
+    this.isAdmin = !bool;
+  }
+
 }

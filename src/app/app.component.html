@@ -1,3 +1,10 @@
-<body class="d-flex flex-column ">
-<app-user-profil></app-user-profil>
+<body >
+<Strong>{{title}}</Strong>
+<button (click)="toggle(isAdmin)">
+View
+</button>
+<button *ngIf="isAdmin">
+  Edit
+</button>
+<!-- <app-user-profil></app-user-profil> -->
 </body>

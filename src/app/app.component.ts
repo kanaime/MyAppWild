@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <Strong>{{title}}</Strong>
-  <button (click)="toggle(isAdmin)">
-  View
-  </button>
-  <button *ngIf="isAdmin">
-    Edit
-  </button>`,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

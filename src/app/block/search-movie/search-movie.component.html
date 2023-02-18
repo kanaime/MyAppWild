@@ -1,0 +1,70 @@
+<form [formGroup]="form" class="w-50 m-auto" (submit)="onSubmit()">
+  <!-- identifiant -->
+ <div formGroupName="titreId">
+  <label for="identifiant">identifiant</label>
+  <input
+              id="identifiant"
+              type="text"
+              class="form-control"
+              formControlName="identifiant"
+              placeholder="Nom(obligatoire)"
+
+            />
+
+
+             <div class="text-danger" *ngIf=" submitted && form.get('titreId')?.errors"> l'identifiant est requis</div>
+             <!-- Titre -->
+             <label for="titre">titre</label>
+  <input
+              id="titre"
+              type="text"
+              class="form-control"
+              formControlName="titre"
+              placeholder="Nom(obligatoire)"
+
+            />
+             <div class="text-danger" *ngIf=" submitted && form.get('titreId')?.errors"> le titre est requis</div>
+
+ </div>
+            <!-- Type  -->
+             <div class="d-flex flex-column">
+              <label for="type">Type</label>
+
+              <select formControlName="type">
+                <option [ngValue]="null" disabled>choose</option>
+                <option *ngFor="let e of type" [ngValue]="e.name">{{e.name}}</option>
+              </select>
+
+            </div>
+
+            <label for="annee">Année de sortie</label>
+            <!-- LA date  -->
+
+
+            <input
+                        id="annee"
+                        type="number"
+                        min="1900"
+                        max="2023"
+                        class="form-control"
+                        formControlName="annee"
+                        placeholder="Nom(obligatoire)"
+
+                      />
+                      <div class="text-danger" *ngIf="submitted && form.get('annee')?.errors"> l'annee doit etre entre {{min}} et {{max}}</div>
+
+                      <div class="d-flex flex-column" *ngIf="show">
+                        <label for="fiche">Fiche </label>
+
+                        <select formControlName="fiche">
+                          <option [ngValue]="null" disabled>Select Fiche</option>
+                          <option *ngFor="let f of fiche" [ngValue]="f.name">{{f.name}}</option>
+                        </select>
+
+                       </div>
+
+             <br>
+             <button class="btn btn-success" type="submit">Sauvegarder</button>
+             <button class="btn btn-warning" type="button" (click)="defaultValue()">Remplir par défaut</button>
+
+</form>

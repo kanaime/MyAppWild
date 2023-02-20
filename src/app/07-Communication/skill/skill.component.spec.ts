@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchMovieComponent } from './search-movie.component';
+import { SkillComponent } from './skill.component';
 
-describe('SearchMovieComponent', () => {
-  let component: SearchMovieComponent;
-  let fixture: ComponentFixture<SearchMovieComponent>;
+describe('SkillComponent', () => {
+  let component: SkillComponent;
+  let fixture: ComponentFixture<SkillComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchMovieComponent ]
+      declarations: [ SkillComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SearchMovieComponent);
+    fixture = TestBed.createComponent(SkillComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -5,17 +5,15 @@ import { BrowserAnimationsModule } from
 import { CalendarModule } from 'primeng/calendar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserProfilComponent } from './block-profil/user-profil/user-profil.component';
-import { SignUpComponent } from './block-profil/sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SearchMovieComponent } from './block/search-movie/search-movie.component';
+import { DevelopperComponent } from './07-Communication/developper/developper.component';
+import { SkillComponent } from './07-Communication/skill/skill.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserProfilComponent,
-    SignUpComponent,
-    SearchMovieComponent
+    DevelopperComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,

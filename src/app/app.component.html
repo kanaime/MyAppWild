@@ -1,21 +1,38 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link"[routerLink]="['/']">Home </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"[routerLink]="['/sign-up']">sign-up page</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/search-movie']">search-movie page</a>
-      </li>
-    </ul>
+<form #form="ngForm" (ngSubmit)="submit(form)" class="d-flex flex-column w-50 m-auto">
+
+  <h4>Mon DEv</h4>
+  <label for="firstname">firstname :</label>
+  <input id="fisrtname" type="text"  name="firstname" ngModel #firstname="ngModel">
+
+  <label for="lastname">lastname :</label>
+  <input id="lastname" type="text" name="lastname" ngModel #lastname="ngModel">
+
+  <label for="age">Age :</label>
+  <input id="age" type="number" name="age" ngModel #age="ngModel">
+
+  <label for="gender">Gender :</label>
+  <input id="gender" type="text" name="gender" ngModel #gender="ngModel">
+
+  <label for="bio">Bio :</label>
+  <input id="bio" type="text" name="bio" ngModel #bio="ngModel">
+
+  <label for="skill1">Skill 1:</label>
+  <input id="skill1" type="text" name="skill1" ngModel #skill1="ngModel">
+
+  <label for="skill2">skill2 :</label>
+  <input id="skill2" type="text" name="skill2" ngModel #skill2="ngModel">
+
+
+  <div>
+    <button type="submit">Nouveau dev</button>
   </div>
-</nav>
-<router-outlet></router-outlet>
+
+</form>
+<div *ngIf="isSubmitted">
+
+  <app-developper [dev]= "dev">
+
+  </app-developper>
+
+</div>

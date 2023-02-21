@@ -7,11 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CocktailListComponent } from './Cocktail/cocktail-list/cocktail-list.component';
 @NgModule({
   declarations: [
-    AppComponent,
-    CocktailListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

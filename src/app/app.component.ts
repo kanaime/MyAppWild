@@ -1,9 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Observable, tap } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { ImageOfTheDay } from './model/image-of-the-day';
-import { Developper } from './models/developper';
-import { Skill } from './models/skill';
 import { NasaService } from './service/nasa.service';
 
 @Component({

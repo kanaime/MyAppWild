@@ -6,7 +6,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CocktailListComponent } from './10-Les-Services/cocktail-list/cocktail-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CocktailListComponent } from './Cocktail/cocktail-list/cocktail-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { CocktailListComponent } from './10-Les-Services/cocktail-list/cocktail-
     ReactiveFormsModule,
     BrowserAnimationsModule,
     CalendarModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

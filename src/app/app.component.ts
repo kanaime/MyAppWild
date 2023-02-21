@@ -9,5 +9,5 @@ import { Skill } from './models/skill';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-constructor(){}
+
 }

@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DevelopperComponent } from './07-Communication/developper/developper.component';
 import { SkillComponent } from './07-Communication/skill/skill.component';
+import { CreateOnomatopiaComponentComponent } from './08-Output/create-onomatopia-component/create-onomatopia-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DevelopperComponent,
-    SkillComponent
+    SkillComponent,
+    CreateOnomatopiaComponentComponent
   ],
   imports: [
     BrowserModule,

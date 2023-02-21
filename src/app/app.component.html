@@ -1,38 +1,7 @@
+<div *ngFor="let ono of onomatopoeiaList">
+  <span>{{ono}}</span>
 
-<form #form="ngForm" (ngSubmit)="submit(form)" class="d-flex flex-column w-50 m-auto">
-
-  <h4>Mon DEv</h4>
-  <label for="firstname">firstname :</label>
-  <input id="fisrtname" type="text"  name="firstname" ngModel #firstname="ngModel">
-
-  <label for="lastname">lastname :</label>
-  <input id="lastname" type="text" name="lastname" ngModel #lastname="ngModel">
-
-  <label for="age">Age :</label>
-  <input id="age" type="number" name="age" ngModel #age="ngModel">
-
-  <label for="gender">Gender :</label>
-  <input id="gender" type="text" name="gender" ngModel #gender="ngModel">
-
-  <label for="bio">Bio :</label>
-  <input id="bio" type="text" name="bio" ngModel #bio="ngModel">
-
-  <label for="skill1">Skill 1:</label>
-  <input id="skill1" type="text" name="skill1" ngModel #skill1="ngModel">
-
-  <label for="skill2">skill2 :</label>
-  <input id="skill2" type="text" name="skill2" ngModel #skill2="ngModel">
-
-
-  <div>
-    <button type="submit">Nouveau dev</button>
-  </div>
-
-</form>
-<div *ngIf="isSubmitted">
-
-  <app-developper [dev]= "dev">
-
-  </app-developper>
-
+</div>
+<div>
+  <app-create-onomatopia-component (sendOnomatopiaToParent)="onomatopoeiaList.push($event)"></app-create-onomatopia-component>
 </div>

@@ -6,16 +6,11 @@ import { CalendarModule } from 'primeng/calendar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DevelopperComponent } from './07-Communication/developper/developper.component';
-import { SkillComponent } from './07-Communication/skill/skill.component';
-import { CreateOnomatopiaComponentComponent } from './08-Output/create-onomatopia-component/create-onomatopia-component.component';
-
+import { CocktailListComponent } from './10-Les-Services/cocktail-list/cocktail-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DevelopperComponent,
-    SkillComponent,
-    CreateOnomatopiaComponentComponent
+    CocktailListComponent
   ],
   imports: [
     BrowserModule,

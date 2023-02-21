@@ -9,8 +9,5 @@ import { Skill } from './models/skill';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onomatopoeiaList: Array<string>= ['toto','moko','tata'];
-  onReceiveNewOnomatopia(): void{
-
-  }
+constructor(){}
 }

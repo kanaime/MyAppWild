@@ -1,0 +1,11 @@
+<div class="d-flex w-100 m-auto justify-content-evenly">
+  <div class="">
+    <h1>Pokedex</h1>
+    <app-pokemon-list-component (sendPokemonToParent)="onReceivePokemon($event)" [pokeList]="pokemonList"></app-pokemon-list-component>
+
+  </div>
+  <div *ngIf="show">
+    <app-pokemon-detail-component [pokemon]="poke" ></app-pokemon-detail-component>
+  </div>
+
+</div>
